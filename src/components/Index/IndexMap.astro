@@ -1,0 +1,42 @@
+---
+import Map from "../ui/Map.astro";
+---
+
+<div class="sm:py-[10px]">
+  <hr class="border border-[#D99D55] w-full mt-5" />
+  <section
+    class="md:px-16 bg-white py-[60px] sm:py-[110px] flex flex-col justify-center items-center"
+  >
+    <div
+      class="flex-col xl:gap-[200px] max-w-screen-xl flex justify-between items-center w-full lg:flex-row px-8 md:px-0"
+    >
+      <Map/>
+
+      <div class="text-center flex flex-col justify-center items-center mt-8 lg:mt-0 w-fit min-w-max">
+          <h3 class="text-3xl lg:text-5xl pb-2">Ven a conocernos</h3>
+          <h4 class="w-[30ch] lg:w-fit text-base lg:text-lg text-[#959595]">
+            Te invitamos a descubrir el Hogar Árbol de Sabiduría.
+          </h4>
+          <a href="https://maps.app.goo.gl/N77BfWfYtw1pWmdi9" target="_blank">
+            <button
+              class=`bg-[#733651] text-[#fff]  py-2  px-6  rounded-lg mt-6 hover:bg-[#D99D55] transition-all duration-300`
+              >Cómo llegar
+            </button>
+          </a>
+      </div>
+    </div>
+  </section>
+  <hr class="border border-[#D99D55] w-full mb-5" />
+</div> 
+<style>
+  h3,
+  h4 {
+    font-family: "Playfair Display Variable", sans-serif;
+  }
+
+  button {
+    font-family: "Work Sans Variable", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+</style>

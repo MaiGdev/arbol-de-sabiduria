@@ -1,0 +1,89 @@
+---
+import FacebookIcon from "../icons/FacebookIcon.astro";
+import InstagramIcon from "../icons/InstagramIcon.astro";
+import LocationIcon from "../icons/LocationIcon.astro";
+import LogoClaro from "../icons/LogoClaro.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import PhoneIcon from "../icons/PhoneIcon.astro";
+import WhatsAppIcon from "../icons/WhatsAppIcon.astro";
+
+---
+
+<section
+  class="px-8 md:px-16 bg-black pt-[60px] pb-12 flex flex-col justify-center items-center text-[#eee] xl:px-0"
+>
+  <div class="md:max-w-screen-xl w-full">
+    <div class="flex flex-col gap-12">
+      <div class="flex justify-between items-start flex-col md:flex-row">
+        <div class="flex flex-col gap-6">
+          <LogoClaro width="88px" height="101px" id="logoClaroFooter" />
+          <div class="flex flex-col gap-2">
+            <h4 class="text-sm font-semibold text-[#d2d2d2] md:text-base">
+              Síguenos en
+            </h4>
+            <div class="flex flex-row gap-2 justify-between">
+              <a href="https://wa.me/+50684884329" target="_blank"
+                ><WhatsAppIcon /></a
+              >
+
+              <a
+                href="https://www.facebook.com/hogararboldesabiduria/"
+                target="_blank"
+              >
+                <FacebookIcon />
+              </a>
+              <a
+                href="https://www.facebook.com/hogararboldesabiduria/"
+                target="_blank"
+              >
+                <InstagramIcon />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 md:mt-0">
+          <h4 class="font-semibold text-[#eee] text-lg">Contáctenos</h4>
+          <hr class="border border-[#D99D55] w-20 mt-1 mb-1" />
+          <div class="pt-5 flex flex-col gap-1">
+            <div class="flex gap-3 justify-center items-center h-[38px]">
+              <LocationIcon
+                width="23"
+                height="22"
+                color="#fff"
+                widthStroke="2"
+              />
+              <span class=""
+                >75 mts este de la Iglesia El Tremedal, San Ramón Alajuela</span
+              >
+            </div>
+            <div class="flex gap-3 justify-center items-center h-[38px]">
+              <MailIcon />
+              <span class="">arboldesabiduria15@gmail.com</span>
+            </div>
+            <div class="flex gap-3 justify-center items-center h-[34px]">
+              <PhoneIcon />
+              <span class="">+506 8488 4329</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <hr class="border border-[#d2d2d2] w-full" />
+      <h5 class="text-[#d2d2d2]">© 2024 All Rights Reserved</h5>
+    </div>
+  </div>
+</section>
+
+<style>
+  span {
+    width: 25ch;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+  }
+  h4 {
+    font-family: "Montserrat", sans-serif;
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import Button from "../ui/Button.astro";
+---
+
+<section class="relative flex justify-center items-center lg:h-full bg-[#492233] ">
+  <div
+    class=" px-4 sm:px-8 lg:px-16 xl:px-0 lg:max-w-screen-xl py-[5rem]  lg:py-[90px] lg:grid lg:grid-cols-[1fr,37%] relative z-10 gap-11 place-items-center"
+  >
+    <div class="div2 text-[#F2F2F2] h-full flex flex-col justify-center ">
+      <div class="pb-0 lg:pb-4">
+        <span class="text-lg md:text-2xl xl:text-3xl w-full"
+          >Descubre Nuestras Actividades para Adultos Mayores</span
+        >
+      </div>
+
+      <div class="flex flex-col gap-4 my-4 lg:my-0 xl:my-4">
+        <p class="text-sm md:text-base lg:text-sm xl:text-base">
+          En el Hogar Árbol de Sabiduría, creemos en la importancia de mantener
+          una vida activa y estimulante para nuestros residentes. Por eso,
+          ofrecemos una amplia variedad de actividades diseñadas para promover
+          el bienestar físico, mental y emocional.
+        </p>
+
+        <p class="text-sm md:text-base lg:text-sm xl:text-base">
+          Nuestras actividades están diseñadas para fomentar la participación y
+          el disfrute, brindando oportunidades para explorar nuevas pasiones y
+          mantenerse conectado con los demás.
+        </p>
+
+        <p class="text-sm md:text-base lg:text-sm xl:text-base">
+          ¡Descubre todas nuestras actividades!
+        </p>
+      </div>
+
+      <Button
+        link="/Activities"
+        color="733651"
+        paddingHorizontales=""
+        paddingVerticales="3"
+        width="w-full"
+        menssage="Explorar actividades"
+      />
+    </div>
+
+    <div class="div1 hidden lg:block">
+      <img src="/ancianosjugando-ajedrez.webp" class="w-full h-full !rounded-2xl" loading="lazy" alt="Adultos mayores jugando ajedrez en el centro Árbol de Sabiduría" />
+    </div>
+  </div>
+</section>
+
+<style>
+  img {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  span {
+    font-family: "Playfair Display Variable", sans-serif;
+    text-wrap: balance;
+  }
+  p {
+    font-family: "Work Sans Variable", sans-serif;
+    font-weight: 300;
+    color: #d9d9d9;
+    text-wrap: pretty;
+  }
+
+  .div2 {
+    max-width: 100%;
+  }
+</style>

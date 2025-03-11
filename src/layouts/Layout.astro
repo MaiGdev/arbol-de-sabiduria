@@ -1,0 +1,114 @@
+---
+// Supports weights 100-900
+import "@fontsource-variable/work-sans";
+
+// Supports weights 400-900
+import "@fontsource-variable/playfair-display";
+
+// Supports weights 300-800
+import "@fontsource-variable/open-sans";
+
+import Footer from "../components/ui/Footer.astro";
+
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body class="">
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  :root {
+  }
+  html {
+    font-family: system-ui, sans-serif;
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    var isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+    if (isDesktop) {
+      var scrollNav = document.getElementById("scrollNav");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+          if (scrollNav) {
+            scrollNav.style.transform = "translateY(0)";
+          }
+        } else {
+          if (scrollNav) {
+            scrollNav.style.transform = "translateY(-400%)";
+            scrollNav.classList.add("hidden");
+          }
+        }
+      });
+    }
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    ((d) => {
+      const $form = d.querySelector("#contact-form")
+
+      if ($form) {
+        
+        $loader = d.querySelector(".contact-form-loader"),
+        $response = d.querySelector(".contact-form-response");
+  
+        $form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          $loader.classList.remove("none");
+    
+          const formData = new FormData($form);
+    
+          fetch("https://formsubmit.co/ajax/maikelgomezmurillo@gmail.com", {
+            method: "POST",
+            body: formData,
+          })
+            .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+            .then((json) => {
+              console.log(json);
+              location.hash = "#gracias";
+              $form.reset();
+            })
+            .catch((err) => {
+              console.log(err);
+              let message =
+                err.statusText ||
+                "Ocurrió un error al enviar, intenta nuevamente";
+              $response.querySelector("h3").innerHTML =
+                `Error ${err.status}: ${message}`;
+            })
+            .finally(() => {
+              $loader.classList.add("none");
+              setTimeout(() => {
+                location.hash = "#close";
+              }, 2000);
+            });
+        });
+      }
+
+    })(document);
+  });
+</script>

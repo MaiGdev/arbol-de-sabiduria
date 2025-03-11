@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SeccionIntro from "../components/Index/SeccionIntro.astro";
+import MedicalWave from "../components/MedicalAttention/MedicalWave.astro";
+import MedicalTabs from "../components/MedicalAttention/MedicalTabs.astro";
+import HeaderClaro from "../components/ui/HeaderClaro.astro";
+---
+
+<Layout title="Árbol de Sabiduría">
+  <HeaderClaro fontColor=`#E6B55D` iconMenuColor="[#E6B55D]" />
+  <MedicalWave />
+  <SeccionIntro
+    titulo="Atención Médica Integral"
+    parrafoGrande="En el Hogar Árbol de Sabiduría, nos comprometemos a proporcionar una atención médica integral y especializada que aborde las necesidades individuales de cada residente."
+    parrafoPequeño="Nuestro equipo de profesionales altamente calificados, incluyendo enfermeras, médicos y terapeutas, están dedicados a garantizar que cada individuo reciba el cuidado médico necesario para mantener su salud y calidad de vida."
+    parrafoPequeño="Nuestro equipo de profesionales altamente calificados, incluyendo enfermeras, médicos y terapeutas, están dedicados a garantizar que cada individuo reciba el cuidado médico necesario para mantener su salud y calidad de vida."
+    parrafoPequeñoMobile="Nuestro equipo de profesionales calificados están dedicados a garantizar que cada individuo reciba el cuidado médico necesario."
+  />
+  <MedicalTabs />
+</Layout>

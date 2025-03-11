@@ -1,0 +1,80 @@
+
+---
+  const fundadora = "/fundadora.png"
+  const nutricionista = "/nutricionista.png"
+  const enfermero = "/enfermero.png"
+  const terapeuta = "/terapeuta.png"
+
+  const team = [
+    {
+      src: fundadora,
+      name: "Dra. Laura Gonzáles Vargas",
+      title: "Fundadora",
+      alt: "Dra. Laura Gonzáles Vargas - Fundadora",
+    },
+    {
+      src: nutricionista,
+      name: "Dra. Maria Villalobos Rodríguez ",
+      title: "Nutricionista Geriátrica",
+      alt: "Dra. Maria Villalobos Rodríguez - Nutricionista Geriátrica",
+    },
+    {
+      src: terapeuta,
+      name: "Juan Ramírez Ortiz",
+      title: "Terapeuta ocupacional",
+      alt: "Juan Ramírez Ortiz - Terapeuta ocupacional",
+    },
+    {
+      src: enfermero,
+      name: "Carlos González Herrera",
+      title: "Enfermero",
+      alt: "Carlos González Herrera - Enfermero",
+    },
+  ]
+  
+---
+
+
+
+<section
+  class="flex flex-col justify-center items-center py-[60px] px-4 sm:px-8 md:px-16"
+>
+  <h3 class="text-center text-3xl md:text-4xl font-playfair pb-16">
+    Nuestro equipo
+  </h3>
+
+  <div class="lg:gap-14 xl:gap-36">
+    <div class="flex justify-center flex-col md:flex-row gap-16">
+      {
+        team.map(person => (
+            <div class="">
+              <img decoding="async" src={person.src} alt={person.alt} class="rounded-full" loading="lazy"  />
+              <div class="flex flex-col pt-8 text-center">
+                <span class="font-bold font-montse text-sm">{person.name}</span>
+                <span class="font-light font-workSans text-sm"
+                  >{person.title}</span
+                >
+            </div>
+      </div>
+        )) 
+      }
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /*   @media (min-width: 640px) {
+    .avatar {
+      width: 13rem !important;
+    }
+  } */
+
+  /* @media (min-width: 768px) { ... }
+
+@media (min-width: 1024px) { ... }
+
+ @media (min-width: 1280px) { ... }
+
+ @media (min-width: 1536px) { ... } */
+</style>
